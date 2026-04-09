@@ -75,7 +75,7 @@
             lblMenu.Location = new Point(31, 27);
             lblMenu.Name = "lblMenu";
             lblMenu.Size = new Size(187, 57);
-            lblMenu.TabIndex = 1;
+            lblMenu.TabIndex = 3;
             lblMenu.Text = "메뉴 선택";
             // 
             // rdoHamBurger
@@ -86,7 +86,7 @@
             rdoHamBurger.Location = new Point(31, 124);
             rdoHamBurger.Name = "rdoHamBurger";
             rdoHamBurger.Size = new Size(141, 50);
-            rdoHamBurger.TabIndex = 2;
+            rdoHamBurger.TabIndex = 0;
             rdoHamBurger.TabStop = true;
             rdoHamBurger.Text = "햄버거";
             rdoHamBurger.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@
             rdoBulgogiBurger.Location = new Point(31, 263);
             rdoBulgogiBurger.Name = "rdoBulgogiBurger";
             rdoBulgogiBurger.Size = new Size(200, 50);
-            rdoBulgogiBurger.TabIndex = 3;
+            rdoBulgogiBurger.TabIndex = 1;
             rdoBulgogiBurger.TabStop = true;
             rdoBulgogiBurger.Text = "불고기버거";
             rdoBulgogiBurger.UseVisualStyleBackColor = true;
@@ -110,7 +110,7 @@
             rdoChickenBurger.Location = new Point(31, 419);
             rdoChickenBurger.Name = "rdoChickenBurger";
             rdoChickenBurger.Size = new Size(173, 50);
-            rdoChickenBurger.TabIndex = 4;
+            rdoChickenBurger.TabIndex = 2;
             rdoChickenBurger.TabStop = true;
             rdoChickenBurger.Text = "치킨버거";
             rdoChickenBurger.UseVisualStyleBackColor = true;
@@ -152,7 +152,7 @@
             chkPotato.Location = new Point(31, 138);
             chkPotato.Name = "chkPotato";
             chkPotato.Size = new Size(174, 50);
-            chkPotato.TabIndex = 8;
+            chkPotato.TabIndex = 0;
             chkPotato.Text = "감자튀김";
             chkPotato.UseVisualStyleBackColor = true;
             // 
@@ -163,7 +163,7 @@
             chkCola.Location = new Point(31, 236);
             chkCola.Name = "chkCola";
             chkCola.Size = new Size(108, 50);
-            chkCola.TabIndex = 9;
+            chkCola.TabIndex = 1;
             chkCola.Text = "콜라";
             chkCola.UseVisualStyleBackColor = true;
             // 
@@ -174,7 +174,7 @@
             chkCheese.Location = new Point(31, 336);
             chkCheese.Name = "chkCheese";
             chkCheese.Size = new Size(181, 50);
-            chkCheese.TabIndex = 10;
+            chkCheese.TabIndex = 2;
             chkCheese.Text = "치즈 추가";
             chkCheese.UseVisualStyleBackColor = true;
             // 
@@ -185,7 +185,7 @@
             chkSauce.Location = new Point(31, 432);
             chkSauce.Name = "chkSauce";
             chkSauce.Size = new Size(179, 50);
-            chkSauce.TabIndex = 11;
+            chkSauce.TabIndex = 3;
             chkSauce.Text = "소스 추가";
             chkSauce.UseVisualStyleBackColor = true;
             // 
@@ -201,7 +201,7 @@
             grpMenu.Location = new Point(77, 209);
             grpMenu.Name = "grpMenu";
             grpMenu.Size = new Size(450, 543);
-            grpMenu.TabIndex = 12;
+            grpMenu.TabIndex = 1;
             grpMenu.TabStop = false;
             // 
             // lblExtraMenu
@@ -225,7 +225,7 @@
             grpOption.Location = new Point(542, 209);
             grpOption.Name = "grpOption";
             grpOption.Size = new Size(236, 543);
-            grpOption.TabIndex = 13;
+            grpOption.TabIndex = 2;
             grpOption.TabStop = false;
             // 
             // grpOrder
@@ -277,7 +277,7 @@
             btnOrder.Location = new Point(857, 677);
             btnOrder.Name = "btnOrder";
             btnOrder.Size = new Size(185, 75);
-            btnOrder.TabIndex = 15;
+            btnOrder.TabIndex = 3;
             btnOrder.Text = "주문하기";
             btnOrder.UseVisualStyleBackColor = false;
             btnOrder.Click += btnOrder_Click;
@@ -289,7 +289,7 @@
             btnInit.Location = new Point(1087, 677);
             btnInit.Name = "btnInit";
             btnInit.Size = new Size(185, 75);
-            btnInit.TabIndex = 16;
+            btnInit.TabIndex = 4;
             btnInit.Text = "초기화";
             btnInit.UseVisualStyleBackColor = false;
             btnInit.Click += btnInit_Click;
@@ -307,6 +307,7 @@
             Controls.Add(lblAppName);
             Name = "Form1";
             Text = "Burger Kiosk v1.0";
+            Load += Form1_Load;
             Shown += Form1_Shown;
             ((System.ComponentModel.ISupportInitialize)picHamBurger).EndInit();
             ((System.ComponentModel.ISupportInitialize)picBulgogiBurger).EndInit();

@@ -12,6 +12,7 @@ namespace BurgerKiosk
         int totalCost = 0;
         private void btnOrder_Click(object sender, EventArgs e)
         {
+
             //메뉴선택
             if (rdoHamBurger.Checked)
             {
@@ -70,6 +71,9 @@ namespace BurgerKiosk
 
         private void btnInit_Click(object sender, EventArgs e)
         {
+            // [중요] 실제 숫자 변수를 0으로 초기화해야 다음 주문 때 안 더해집니다!
+            totalCost = 0;
+
             rdoHamBurger.Checked = false;
             rdoBulgogiBurger.Checked = false;
             rdoChickenBurger.Checked = false;
@@ -87,6 +91,27 @@ namespace BurgerKiosk
             rdoHamBurger.Checked = false;
             rdoBulgogiBurger.Checked = false;
             rdoChickenBurger.Checked = false;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // 1. 모든 라디오 버튼 체크 해제
+            rdoHamBurger.Checked = false;
+            rdoBulgogiBurger.Checked = false;
+            rdoChickenBurger.Checked = false;
+
+            // 2. 중요: 첫 번째 라디오 버튼의 TabStop을 강제로 true로 설정
+            // 이렇게 해야 체크가 안 된 상태에서도 탭 키를 받았을 때 이쪽으로 포커스가 옵니다.
+            rdoHamBurger.TabStop = true;
+
+            // 3. 시작 시 포커스를 라벨로 보내서 점선을 숨김
+            this.ActiveControl = lblAppName;
+
+            // 엔터키를 눌렀을 때 실행될 기본 버튼을 btnOrder로 설정합니다.
+            this.AcceptButton = btnOrder;
+
+            // 추가 팁: ESC키를 누르면 초기화 버튼(btnInit)이 눌리게 하고 싶다면?
+            this.CancelButton = btnInit;
         }
     }
 }
