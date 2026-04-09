@@ -307,6 +307,7 @@
             Controls.Add(lblAppName);
             Name = "Form1";
             Text = "Burger Kiosk v1.0";
+            Shown += Form1_Shown;
             ((System.ComponentModel.ISupportInitialize)picHamBurger).EndInit();
             ((System.ComponentModel.ISupportInitialize)picBulgogiBurger).EndInit();
             ((System.ComponentModel.ISupportInitialize)picChickenBurger).EndInit();
